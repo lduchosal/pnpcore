@@ -892,7 +892,7 @@ namespace PnP.Core.Services
 
                     using (var request = new HttpRequestMessage(HttpMethod.Get, $"{Uri}/_vti_bin/client.svc"))
                     {
-                        request.Headers.Add("Authorization", "Bearer");
+                        //request.Headers.Add("Authorization", "Bearer");
                         request.Headers.Add("Access-Control-Allow-Origin", "*");
                         HttpResponseMessage response = await httpClient.SendAsync(request).ConfigureAwait(false);
 

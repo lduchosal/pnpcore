@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net5.0;net6.0</TargetFrameworks>
+		<TargetFramework>netstandard2.0</TargetFramework>
 		<LangVersion>8.0</LangVersion>
 		<RootNamespace>PnP.Core.Auth</RootNamespace>
 		<AssemblyName>PnP.Core.Auth</AssemblyName>
@@ -9,7 +9,14 @@
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<Copyright>PnP 2022</Copyright>
 		<Company>PnP</Company>
-		<Authors>PnP</Authors>
+
+		<PackageId>Arcantel.$(AssemblyName)</PackageId>
+		<Authors>Arcantel</Authors>
+		<Product>Arcantel.$(AssemblyName)</Product>
+		<AssemblyVersion>1.7.0</AssemblyVersion>
+		<FileVersion>1.7.0</FileVersion>
+		<Version>1.7.0</Version>
+		
 		<Description>The PnP Core Auth library supports the PnP Core SDK providing a set of OAuth Authentication Providers internally based on the Microsoft Authentication Library.</Description>
 		<PackageProjectUrl>https://aka.ms/pnp/coresdk</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/pnp/pnpcore</RepositoryUrl>
