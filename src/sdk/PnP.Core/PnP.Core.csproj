@@ -13,9 +13,9 @@
 		<PackageId>Arcantel.$(AssemblyName)</PackageId>
 		<Authors>Arcantel</Authors>
 		<Product>Arcantel.$(AssemblyName)</Product>
-		<AssemblyVersion>1.7.0</AssemblyVersion>
-		<FileVersion>1.7.0</FileVersion>
-		<Version>1.7.0</Version>
+		<AssemblyVersion>1.7.1</AssemblyVersion>
+		<FileVersion>1.7.1</FileVersion>
+		<Version>1.7.1</Version>
 
 		<Description>The PnP Core SDK provides a development model that unites SharePoint REST and Microsoft Graph in a high performance, lightweight library. The SDK uses a model which under the covers is automatically translated to the needed SharePoint REST or Microsoft Graph queries.</Description>
 		<PackageProjectUrl>https://aka.ms/pnp/coresdk</PackageProjectUrl>
@@ -49,13 +49,13 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-		<PackageReference Include="Microsoft.ApplicationInsights" Version="2.13.1" />
+		<PackageReference Include="Microsoft.ApplicationInsights" Version="2.21.0" />
 		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.1" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
 		<PackageReference Include="System.Text.Json" Version="4.7.2" />

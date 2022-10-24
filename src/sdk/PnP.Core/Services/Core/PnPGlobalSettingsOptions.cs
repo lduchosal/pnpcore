@@ -56,6 +56,22 @@ namespace PnP.Core.Services
         public int HttpTimeout { get; set; } = 100;
 
         /// <summary>
+        /// Desactivate the HTTP header Authorization Bearer
+        /// </summary>
+        public bool DesactivateBearerToken { get; set; } = false;
+
+        /// <summary>
+        /// Batch triggered request
+        /// </summary>
+        public bool ApiCallViaBatchMethod { get; set; } = true;
+
+        /// <summary>
+        /// Allow unsecured http api call. (Allow url that start with "http://..."). 
+        /// Defautl behaviour is to accepts only https trafic.
+        /// </summary>
+        public bool AllowUnsecuredHttpApiCall { get; set; } = false;
+
+        /// <summary>
         /// Use the Retry-After header for calculating the delay in case of a retry. Defaults to false
         /// </summary>
         public bool HttpSharePointRestUseRetryAfterHeader { get; set; } = true;

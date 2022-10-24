@@ -76,6 +76,9 @@ namespace PnP.Core.Services.Builder.Configuration
                 }
                 options.HttpUserAgent = pnpCoreOptions.Value.HttpRequests.UserAgent;
                 options.HttpTimeout = pnpCoreOptions.Value.HttpRequests.Timeout;
+                options.DesactivateBearerToken = pnpCoreOptions.Value.HttpRequests.DesactivateBearerToken;
+                options.ApiCallViaBatchMethod = pnpCoreOptions.Value.HttpRequests.ApiCallViaBatchMethod;
+                options.AllowUnsecuredHttpApiCall = pnpCoreOptions.Value.HttpRequests.AllowUnsecuredHttpApiCall;
             }
         }
     }
