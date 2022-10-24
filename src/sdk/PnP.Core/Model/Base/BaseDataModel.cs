@@ -978,7 +978,7 @@ namespace PnP.Core.Model
                 apiCall = PrefixApiCall(apiCall, entityInfo);
 
                 // This is batch triggered request
-                apiCall.AddedViaBatchMethod = false;
+                apiCall.AddedViaBatchMethod = this.PnPContext.GlobalOptions.ApiCallViaBatchMethod;
 
                 // Ensure there's no Graph beta endpoint being used when that was not allowed
                 if (!CanUseGraphBetaForRequest(apiCall, entityInfo))
@@ -1041,7 +1041,7 @@ namespace PnP.Core.Model
                 // The request is populated and already has a fully qualified url
                 if (apiCall.Request != null 
                     && ( apiCall.Request.StartsWith("https://", StringComparison.InvariantCultureIgnoreCase)
-                         || apiCall.Request.StartsWith("http://", StringComparison.InvariantCultureIgnoreCase))
+                         || (PnPContext.GlobalOptions.AllowUnsecuredHttpApiCall && apiCall.Request.StartsWith("http://", StringComparison.InvariantCultureIgnoreCase)))
                     )
                 {
                     return apiCall;
