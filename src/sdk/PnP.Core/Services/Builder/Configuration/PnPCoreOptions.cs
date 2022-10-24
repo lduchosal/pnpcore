@@ -50,6 +50,23 @@ namespace PnP.Core.Services.Builder.Configuration
     public class PnPCoreHttpRequestsOptions
     {
         /// <summary>
+        /// Desactivate the HTTP header Authorization Bearer
+        /// </summary>
+        public bool DesactivateBearerToken { get; set; }
+
+
+        /// <summary>
+        /// Batch triggered request
+        /// </summary>
+        public bool ApiCallViaBatchMethod { get; set; }
+
+        /// <summary>
+        /// Allow unsecured http api call. (Allow url that start with "http://..."). 
+        /// Defautl behaviour is to accepts only https trafic.
+        /// </summary>
+        public bool AllowUnsecuredHttpApiCall { get; set; }
+
+        /// <summary>
         /// User agent value, can be customized via configuration 
         /// </summary>
         public string UserAgent { get; set; }
